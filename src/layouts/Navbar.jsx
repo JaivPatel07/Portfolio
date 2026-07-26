@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FiBookOpen, FiCode, FiCpu, FiFolder, FiHome, FiMenu, FiMoon, FiSun, FiUser, FiX } from 'react-icons/fi';
+import { FiBookOpen, FiCode, FiCpu, FiFolder, FiHome, FiUser } from 'react-icons/fi';
 import { useTheme } from '../context/ThemeContext';
 
 const homeScrollLinks = [
@@ -80,16 +80,7 @@ export default function Navbar() {
           </ul>
 
           <div className="nav-actions">
-            <button className="nav-icon-btn" onClick={toggleTheme} aria-label="Toggle theme">
-              {theme === 'dark' ? <FiSun /> : <FiMoon />}
-            </button>
-            <button
-              className="nav-icon-btn nav-mobile-toggle"
-              onClick={() => setMobileOpen((open) => !open)}
-              aria-label="Toggle menu"
-            >
-              {mobileOpen ? <FiX /> : <FiMenu />}
-            </button>
+            
           </div>
         </div>
       </nav>

@@ -1,49 +1,37 @@
-import {
-  SiReact, SiNextdotjs, SiPython, SiDjango, SiNodedotjs, SiTypescript,
-  SiJavascript, SiFastapi, SiPostgresql, SiMongodb, SiDocker, SiGit,
-  SiGithub, SiTailwindcss, SiFirebase, SiRedis, SiLinux, SiVercel, SiFigma,
-  SiTensorflow,
-} from 'react-icons/si';
-import { FaAws } from 'react-icons/fa';
+import { icons } from '../data/icons';
 import { techStack } from '../data';
 
 export default function TechStack() {
-  const icons = {
-    SiReact, SiNextdotjs, SiPython, SiDjango, SiNodedotjs, SiTypescript,
-    SiJavascript, SiFastapi, SiPostgresql, SiMongodb, SiDocker, SiGit,
-    SiGithub, SiTailwindcss, SiFirebase, SiRedis, SiLinux, SiVercel, SiFigma,
-    FaAws, SiTensorflow,
-  };
-
   return (
-    <section
-      className="section"
-      id="techstack"
-      style={{ background: "var(--bg-secondary)" }}
-    >
+    <section className="section" id="techstack" style={{ background: 'var(--bg-secondary)' }}>
       <div className="container">
         <div className="section-header">
-          <div className="section-badge">Tech Stack</div>
-          <h2 className="section-title">
-            Technologies I Use to Build Modern Applications
-          </h2>
+          <div className="section-badge">⚡ Tech Stack</div>
+          <h2 className="section-title">The Technologies Behind My Projects</h2>
           <p className="section-subtitle">
-            My preferred tools for building scalable, responsive, and
-            production-ready applications.
+            From crafting interactive user interfaces to developing scalable backend systems, these
+            are the technologies I use to bring ideas to life and build modern web applications.
           </p>
         </div>
 
-        <div className="tech-stack-grid compact">
-          {techStack.map(({ name, icon, color }) => {
-            const IconComponent = icons[icon];
-            return (
-              <div className="tech-item" key={name}>
-                {IconComponent && <IconComponent className="tech-icon" style={{ color }} />}
-                <span>{name}</span>
-              </div>
-            );
-          })}
-        </div>
+        {techStack.map((category) => (
+          <div className="tech-category-wrapper" key={category.category}>
+            <h3 className="tech-category-title">{category.category}</h3>
+            <div className="tech-stack-grid">
+              {category.items.map(({ name, icon, color, description }) => {
+                const IconComponent = icons[icon];
+                return (
+                  <div className="tech-item" key={name} title={description}>
+                    <div className="tech-item-inner">
+                      {IconComponent && <IconComponent className="tech-icon" style={{ color }} />}
+                      <div className="tech-item-name">{name}</div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

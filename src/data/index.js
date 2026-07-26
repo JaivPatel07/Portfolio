@@ -16,16 +16,12 @@ export const personal = {
   ],
   tagline:
     "I build scalable full-stack web applications and enjoy solving real-world problems through software.",
-  bio: `Hi, I'm Jaiv Patel, a Computer Science student who enjoys building products from scratch. Whether it's a full-stack web application, an AI-powered tool, or an open-source contribution, I love transforming ideas into software that people can use. Every project I build teaches me something new, and I'm always looking for the next challenge.`,
-  bio2: ``,
+  bio: `I'm Jaiv Patel, a Computer Science student and full-stack developer passionate about building meaningful software. From web applications and AI-powered tools to open-source contributions, I enjoy transforming ideas into products that solve real problems. I'm constantly learning new technologies, improving my skills, and taking on projects that challenge me to grow.`,
   location: "India",
   email: "jaivpatel07@gmail.com",
-  phone: "+91 99134 49160",
   github: "https://github.com/JaivPatel07",
   linkedin: "https://linkedin.com/in/jaivpatel07",
-  twitter: "https://twitter.com/jaivpatel07",
   website: "https://jaivpatel.dev",
-  resumeUrl: "/resume.pdf",
   aboutHighlights: [
     'Full-stack product development',
     'Clean React interfaces',
@@ -60,56 +56,7 @@ export const education = {
   ],
 };
 
-export const skills = [
-  {
-    category: "Programming",
-    icon: "💻",
-    color: "#7c3aed",
-    items: ["Python", "JavaScript", "TypeScript", "Java", "C++"],
-  },
-  {
-    category: "Frontend",
-    icon: "🎨",
-    color: "#06b6d4",
-    items: ["HTML5", "CSS3", "React.js", "Next.js", "Tailwind CSS", "Bootstrap", "Framer Motion"],
-  },
-  {
-    category: "Backend",
-    icon: "⚙️",
-    color: "#10b981",
-    items: ["Node.js", "Express.js", "Django", "Flask", "FastAPI", "REST APIs", "GraphQL"],
-  },
-  {
-    category: "Database",
-    icon: "🗄️",
-    color: "#f59e0b",
-    items: ["PostgreSQL", "MongoDB", "MySQL", "SQLite", "Redis", "Firebase"],
-  },
-  {
-    category: "DevOps & Tools",
-    icon: "🛠️",
-    color: "#ec4899",
-    items: ["Git", "GitHub", "Docker", "Linux", "VS Code", "Postman", "Figma"],
-  },
-  {
-    category: "Currently Learning",
-    icon: "🧠",
-    color: "#f97316",
-    items: ["System Design", "Go", "Kubernetes", "Advanced AI"],
-  },
-  {
-    category: "Cloud",
-    icon: "☁️",
-    color: "#8b5cf6",
-    items: ["Vercel", "Render", "Railway", "AWS", "Cloudflare", "Netlify"],
-  },
-  {
-    category: "AI / ML",
-    icon: "🤖",
-    color: "#06b6d4",
-    items: ["OpenAI API", "Gemini API", "Hugging Face", "Ollama", "LangChain", "Scikit-learn"],
-  },
-];
+
 
 export const radarData = [
   { subject: "Frontend", A: 90 },
@@ -121,28 +68,45 @@ export const radarData = [
 ];
 
 export const techStack = [
-  { name: "React", icon: "SiReact", color: "#61DAFB" },
-  { name: "Next.js", icon: "SiNextdotjs", color: "#ffffff" },
-  { name: "Python", icon: "SiPython", color: "#3776AB" },
-  { name: "Django", icon: "SiDjango", color: "#092E20" },
-  { name: "Node.js", icon: "SiNodedotjs", color: "#339933" },
-  { name: "TypeScript", icon: "SiTypescript", color: "#3178C6" },
-  { name: "JavaScript", icon: "SiJavascript", color: "#F7DF1E" },
-  { name: "FastAPI", icon: "SiFastapi", color: "#009688" },
-  { name: "PostgreSQL", icon: "SiPostgresql", color: "#4169E1" },
-  { name: "MongoDB", icon: "SiMongodb", color: "#47A248" },
-  { name: "Docker", icon: "SiDocker", color: "#2496ED" },
-  { name: "Git", icon: "SiGit", color: "#F05032" },
-  { name: "GitHub", icon: "SiGithub", color: "#ffffff" },
-  { name: "Tailwind", icon: "SiTailwindcss", color: "#06B6D4" },
-  { name: "Firebase", icon: "SiFirebase", color: "#FFCA28" },
-  { name: "Redis", icon: "SiRedis", color: "#DC382D" },
-  { name: "Linux", icon: "SiLinux", color: "#FCC624" },
-  { name: "Vercel", icon: "SiVercel", color: "#ffffff" },
-  { name: "AWS", icon: "FaAws", color: "#FF9900" },
-  { name: "AI/ML", icon: "SiTensorflow", color: "#FF6F00" }, // Replaced SiOpenai
-  { name: "Figma", icon: "SiFigma", color: "#F24E1E" },
-  { name: "VS Code", icon: "SiVisualStudioCode", color: "#007ACC" },
+  {
+    category: 'Frontend',
+    items: [
+      { name: 'React', icon: 'SiReact', color: '#61DAFB', description: 'A JavaScript library for building user interfaces.' },
+      { name: 'Next.js', icon: 'SiNextdotjs', color: '#FFFFFF', description: 'The React framework for production.' },
+      { name: 'JavaScript', icon: 'SiJavascript', color: '#F7DF1E', description: 'The programming language of the web.' },
+      { name: 'TypeScript', icon: 'SiTypescript', color: '#3178C6', description: 'JavaScript with syntax for types.' },
+      { name: 'Tailwind CSS', icon: 'SiTailwindcss', color: '#06B6D4', description: 'A utility-first CSS framework.' },
+    ],
+  },
+  {
+    category: 'Backend',
+    items: [
+      { name: 'Node.js', icon: 'SiNodedotjs', color: '#339933', description: 'JavaScript runtime built on Chrome\'s V8 engine.' },
+      { name: 'Express.js', icon: 'SiExpress', color: '#FFFFFF', description: 'Minimalist web framework for Node.js.' },
+      { name: 'Python', icon: 'SiPython', color: '#3776AB', description: 'A versatile high-level programming language.' },
+      { name: 'Django', icon: 'SiDjango', color: '#092E20', description: 'High-level Python web framework.' },
+      { name: 'FastAPI', icon: 'SiFastapi', color: '#009688', description: 'Modern, fast web framework for Python.' },
+    ],
+  },
+  {
+    category: 'Databases',
+    items: [
+      { name: 'MongoDB', icon: 'SiMongodb', color: '#47A248', description: 'NoSQL database for modern applications.' },
+      { name: 'PostgreSQL', icon: 'SiPostgresql', color: '#4169E1', description: 'A powerful, open source object-relational database system.' },
+      { name: 'Firebase', icon: 'SiFirebase', color: '#FFCA28', description: 'Platform for building web and mobile applications.' },
+    ],
+  },
+  {
+    category: 'Tools & Deployment',
+    items: [
+      { name: 'Git', icon: 'SiGit', color: '#F05032', description: 'Distributed version control system.' },
+      { name: 'GitHub', icon: 'SiGithub', color: '#FFFFFF', description: 'Platform for hosting and collaborating on Git repositories.' },
+      { name: 'Docker', icon: 'SiDocker', color: '#2496ED', description: 'Platform for developing, shipping, and running applications in containers.' },
+      { name: 'Vercel', icon: 'SiVercel', color: '#FFFFFF', description: 'Platform for frontend developers to deploy websites and web services.' },
+      { name: 'VS Code', icon: 'SiVisualstudiocode', color: '#007ACC', description: 'A lightweight but powerful source code editor.' },
+      { name: 'Figma', icon: 'SiFigma', color: '#F24E1E', description: 'A collaborative interface design tool.' },
+    ],
+  },
 ];
 
 export const experience = [
@@ -428,89 +392,3 @@ export const achievements = {
     },
   ],
 };
-
-export const githubStats = {
-  repos: 30,
-  stars: 120,
-  followers: 85,
-  contributions: 847,
-  languages: [
-    { name: 'Python', percentage: 35, color: '#3776AB' },
-    { name: 'JavaScript', percentage: 30, color: '#F7DF1E' },
-    { name: 'TypeScript', percentage: 15, color: '#3178C6' },
-    { name: 'HTML/CSS', percentage: 12, color: '#E34F26' },
-    { name: 'Others', percentage: 8, color: '#7c3aed' },
-  ],
-};
-
-export const timeline = [
-  {
-    year: "2022",
-    title: "Started Learning Python",
-    desc: "Wrote my first 'Hello World' and began my journey into programming.",
-    icon: "🚀",
-  },
-  {
-    year: "2023",
-    title: "Built First Website",
-    desc: "Created my first static website using HTML, CSS, and vanilla JavaScript.",
-    icon: "🌐",
-  },
-  {
-    year: "2024",
-    title: "Started B.Tech in Computer Science",
-    desc: "Began my formal education in CS, diving deep into data structures and algorithms.",
-    icon: "🎓",
-  },
-  {
-    year: "2025",
-    title: "Built CoDO",
-    desc: "Developed and launched my first major full-stack project, a student collaboration platform.",
-    icon: "🛠️",
-  },
-  {
-    year: "2025",
-    title: "Started Open Source",
-    desc: "Began actively contributing to open-source projects, learning to collaborate with the community.",
-    icon: "🤝",
-  },
-  {
-    year: "2026",
-    title: "Built AI Projects",
-    desc: "Explored the world of AI by building projects like Checkpoint AI and other tools using LLMs.",
-    icon: "🤖",
-  },
-  {
-    year: "Today",
-    title: "Looking for Internship Opportunities",
-    desc: "Actively seeking challenging internship roles to apply my skills and contribute to real-world products.",
-    icon: "💼",
-  },
-];
-
-export const testimonials = [];
-
-export const faqs = [
-  {
-    q: "What kind of roles are you looking for?",
-    a: "I'm actively seeking a Software Development Engineer (SDE) or Full Stack Developer internship where I can contribute to building and scaling products.",
-  },
-  {
-    q: "What technologies do you specialize in?",
-    a: "My core stack is React/Next.js for frontend, Django/FastAPI for backend, PostgreSQL/MongoDB for databases, and I have experience integrating various AI APIs including OpenAI and Gemini.",
-  },
-  {
-    q: "Are you open to remote internships?",
-    a: "Yes, absolutely! I am well-equipped for remote work and have experience collaborating with distributed teams using tools like GitHub, Slack, and Asana.",
-  },
-  {
-    q: "What are you currently learning?",
-    a: "I'm currently diving deeper into system design principles, learning Go (Golang) for high-performance services, and exploring Kubernetes for container orchestration.",
-  },
-  {
-    q: "How can I contact you?",
-    a: "The best way to reach me is via email at jaivpatel07@gmail.com or through the contact form on this website. I'm also active on LinkedIn.",
-  },
-];
-
-export const blogPosts = [];

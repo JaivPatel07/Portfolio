@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FiDownload, FiEye, FiGithub, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi';
+import { FiEye, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import { personal } from '../data/index';
 
 const roles = personal.titles;
@@ -41,7 +41,6 @@ export default function Hero() {
 
       <div className="hero-content">
         <div className="hero-text">
-          <div className="hero-greeting">Open to Internships</div>
 
           <h1 className="hero-name">
             Hi, I'm <span className="gradient-text">{personal.firstName}</span>
@@ -60,9 +59,6 @@ export default function Hero() {
             <button className="btn btn-primary" onClick={() => scrollTo('projects')}>
               <FiEye /> View Projects
             </button>
-            <a className="btn btn-secondary" href={personal.resumeUrl} download>
-              <FiDownload /> Download CV
-            </a>
           </div>
 
           <div className="hero-socials">
@@ -72,21 +68,20 @@ export default function Hero() {
             <a href={personal.linkedin} target="_blank" rel="noreferrer" className="hero-social-link" aria-label="LinkedIn">
               <FiLinkedin />
             </a>
-            <a href={personal.twitter} target="_blank" rel="noreferrer" className="hero-social-link" aria-label="X">
-              <FiTwitter />
-            </a>
             <a href={`mailto:${personal.email}`} className="hero-social-link" aria-label="Email">
               <FiMail />
             </a>
           </div>
         </div>
 
+
+
         <div className="hero-image-wrapper">
           <div className="hero-avatar-container">
             <div className="hero-avatar-ring-2" />
             <div className="hero-avatar-ring" />
             <div className="hero-avatar-glow" />
-            <img className="hero-avatar-img" src="/avatar.png" alt="Jaiv Patel" />
+            <img className="hero-avatar-img" src="../assets/avatar.jpeg" alt="Jaiv Patel" />
           </div>
         </div>
       </div>

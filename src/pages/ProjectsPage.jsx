@@ -1,6 +1,4 @@
 import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FiArrowLeft, FiSearch } from 'react-icons/fi';
 import ProjectCard from '../components/ProjectCard';
 import Footer from '../layouts/Footer';
 import Navbar from '../layouts/Navbar';
@@ -31,8 +29,6 @@ export default function ProjectsPage() {
     });
   }, [activeFilter, search]);
 
-  const featured = projects[0];
-
   return (
     <>
       <Navbar />
@@ -55,15 +51,6 @@ export default function ProjectsPage() {
                   </button>
                 ))}
               </div>
-              <label className="projects-search">
-                <FiSearch />
-                <input
-                  type="search"
-                  placeholder="Search projects..."
-                  value={search}
-                  onChange={(event) => setSearch(event.target.value)}
-                />
-              </label>
             </div>
 
             <div className="projects-grid">

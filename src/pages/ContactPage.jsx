@@ -1,15 +1,12 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import {
   FiAlertCircle,
-  FiArrowLeft,
   FiCheck,
   FiGithub,
   FiLinkedin,
   FiMail,
   FiMapPin,
   FiSend,
-  FiTwitter,
 } from 'react-icons/fi';
 import Footer from '../layouts/Footer';
 import Navbar from '../layouts/Navbar';
@@ -61,7 +58,6 @@ export default function ContactPage() {
   const socials = [
     { icon: <FiGithub />, href: personal.github, label: 'GitHub' },
     { icon: <FiLinkedin />, href: personal.linkedin, label: 'LinkedIn' },
-    { icon: <FiTwitter />, href: personal.twitter, label: 'X' },
     { icon: <FiMail />, href: `mailto:${personal.email}`, label: 'Email' },
   ];
 
