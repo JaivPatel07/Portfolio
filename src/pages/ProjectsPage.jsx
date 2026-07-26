@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react';
+import { FiSearch } from 'react-icons/fi';
 import ProjectCard from '../components/ProjectCard';
+import MiniProjectCard from '../components/MiniProjectCard';
 import Footer from '../layouts/Footer';
 import Navbar from '../layouts/Navbar';
 import { projects } from '../data/index';
@@ -10,7 +12,7 @@ export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState('All');
   const [search, setSearch] = useState('');
 
-  const filtered = useMemo(() => {
+  const filteredProjects = useMemo(() => {
     const query = search.trim().toLowerCase();
 
     return projects.filter((project) => {
@@ -29,14 +31,17 @@ export default function ProjectsPage() {
     });
   }, [activeFilter, search]);
 
+  const featured = filteredProjects.filter((p) => p.type === 'featured');
+  const standard = filteredProjects.filter((p) => p.type === 'standard');
+  const mini = filteredProjects.filter((p) => p.type === 'mini');
+
   return (
     <>
       <Navbar />
       <main className="page-main">
         <section className="section" id="projects">
           <div className="container">
-             <div className="section-header">
-              <h1 className="section-title">My Projects</h1>
+            <div className="section-header">
             </div>
             <div className="projects-controls archive-controls">
               <div className="projects-filter" aria-label="Project filters">
@@ -51,15 +56,51 @@ export default function ProjectsPage() {
                   </button>
                 ))}
               </div>
+              <div className="projects-search">
+                <FiSearch />
+                <input
+                  type="search"
+                  placeholder="Search projects..."
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                />
+              </div>
             </div>
 
-            <div className="projects-grid">
-              {filtered.map((project) => (
-                <ProjectCard project={project} key={project.id} />
-              ))}
-            </div>
+            {featured.length > 0 && (
+              <div className="project-category-wrapper">
+                <h2 className="project-category-title"><span className="project-category-icon">⭐</span> Featured Projects</h2>
+                <div className="projects-grid">
+                  {featured.map((project) => (
+                    <ProjectCard project={project} key={project.id} />
+                  ))}
+                </div>
+              </div>
+            )}
 
-            {filtered.length === 0 && (
+            {standard.length > 0 && (
+              <div className="project-category-wrapper">
+                <h2 className="project-category-title"><span className="project-category-icon">🚀</span> More Projects</h2>
+                <div className="projects-grid">
+                  {standard.map((project) => (
+                    <ProjectCard project={project} key={project.id} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {mini.length > 0 && (
+              <div className="project-category-wrapper">
+                <h2 className="project-category-title"><span className="project-category-icon">🎮</span> Mini Projects</h2>
+                <div className="mini-projects-grid">
+                  {mini.map((project) => (
+                    <MiniProjectCard project={project} key={project.id} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {filteredProjects.length === 0 && (
               <div className="projects-not-found">
                 <h3>No projects found</h3>
                 <p>Try a different filter or search term.</p>

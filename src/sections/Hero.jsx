@@ -81,7 +81,7 @@ export default function Hero() {
             <div className="hero-avatar-ring-2" />
             <div className="hero-avatar-ring" />
             <div className="hero-avatar-glow" />
-            <img className="hero-avatar-img" src="../assets/avatar.jpeg" alt="Jaiv Patel" />
+            <img className="hero-avatar-img" src="src/assets/avatar.jpeg" alt="Jaiv Patel" />
           </div>
         </div>
       </div>

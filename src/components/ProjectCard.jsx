@@ -2,7 +2,6 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
 export default function ProjectCard({ project, featured = false }) {
   const tech = featured ? project.tech : project.tech.slice(0, 4);
-  const statusClass = project.status === 'Live' ? 'status-live' : 'status-progress';
 
   return (
     <article className={`project-card ${featured ? 'featured-project-card' : ''}`}>
@@ -41,7 +40,6 @@ export default function ProjectCard({ project, featured = false }) {
       <div className="project-card-body">
         <div className="project-card-heading">
           <h3 className="project-card-title">{project.title}</h3>
-          <span className={`project-status ${statusClass}`}>{project.status}</span>
         </div>
         <p className="project-card-desc">{featured && project.longDesc ? project.longDesc : project.description}</p>
 

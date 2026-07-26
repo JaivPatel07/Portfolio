@@ -4,30 +4,32 @@ import Footer from '../layouts/Footer';
 import Navbar from '../layouts/Navbar';
 import { achievements } from '../data/index';
 
-const filterCats = ['All', 'Hackathon', 'Programming', 'Coursera', 'Google', 'IBM'];
+const filterCats = ['All', 'Professional Courses', 'Programming', 'AI / Data Science', 'Hackathon', 'Coursera', 'Google', 'IBM'];
 
 function CertificateCard({ item }) {
   return (
-    <article className="certificate-image-card">
-      <div className="certificate-img-container">
-        <div className="certificate-image-fallback">
-          <span>{item.issuer}</span>
+    <a href={item.link} target="_blank" rel="noreferrer" className="certificate-card-link">
+      <article className="certificate-image-card">
+        <div className="certificate-img-container">
+          <div className="certificate-image-fallback">
+            <span>{item.issuer}</span>
+          </div>
+          <img
+            src={item.thumbnail}
+            alt={item.title}
+            loading="lazy"
+            onError={(event) => {
+              event.currentTarget.style.display = 'none';
+            }}
+          />
+          <div className="certificate-year-badge">{item.date}</div>
+          <div className="certificate-text-overlay">
+            <h3 className="certificate-overlay-title">{item.title}</h3>
+            <p className="certificate-overlay-issuer">{item.issuer}</p>
+          </div>
         </div>
-        <img
-          src={item.thumbnail}
-          alt={item.title}
-          loading="lazy"
-          onError={(event) => {
-            event.currentTarget.style.display = 'none';
-          }}
-        />
-        <div className="certificate-year-badge">{item.date}</div>
-        <div className="certificate-text-overlay">
-          <h3 className="certificate-overlay-title">{item.title}</h3>
-          <p className="certificate-overlay-issuer">{item.issuer}</p>
-        </div>
-      </div>
-    </article>
+      </article>
+    </a>
   );
 }
 

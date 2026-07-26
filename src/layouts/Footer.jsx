@@ -77,7 +77,6 @@ export default function Footer() {
             <div className="footer-links">
               <a href={personal.github} target="_blank" rel="noreferrer" className="footer-link">GitHub</a>
               <a href={personal.linkedin} target="_blank" rel="noreferrer" className="footer-link">LinkedIn</a>
-              <a href={personal.twitter} target="_blank" rel="noreferrer" className="footer-link">Twitter/X</a>
               <a href={`mailto:${personal.email}`} className="footer-link">Email Me</a>
             </div>
           </div>

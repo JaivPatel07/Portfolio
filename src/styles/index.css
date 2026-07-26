@@ -312,6 +312,22 @@ img { max-width: 100%; display: block; }
 .projects-search input { flex: 1; width: 100%; background: none; border: none; outline: none; color: var(--text-primary); font-family: var(--font-primary); font-size: 0.9rem; }
 .projects-search input::placeholder { color: var(--text-muted); }
 .projects-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--spacing-xl); }
+.project-category-wrapper { margin-bottom: var(--spacing-3xl); }
+.project-category-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--spacing-sm);
+}
+.project-category-icon {
+  font-size: 1.2em;
+  line-height: 1;
+}
 .projects-not-found { text-align: center; padding: 4rem 0; color: var(--text-muted); }
 .projects-not-found h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
 .project-card {
@@ -354,6 +370,26 @@ img { max-width: 100%; display: block; }
 .project-preview-content span { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.82; }
 .project-preview-content strong { font-size: clamp(1.4rem,3vw,2.2rem); line-height: 1.05; }
 .featured-projects-grid { display: grid; grid-template-columns: 1fr; gap: var(--spacing-xl); }
+.mini-projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--spacing-lg); }
+.mini-project-card { background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: var(--spacing-lg); display: flex; flex-direction: column; gap: var(--spacing-sm); transition: all var(--transition-normal); }
+.mini-project-card:hover { transform: translateY(-4px); border-color: var(--border-hover); box-shadow: var(--shadow-accent); }
+.mini-project-header { display: flex; align-items: center; gap: var(--spacing-sm); }
+.mini-project-icon { font-size: 1.2rem; }
+.mini-project-title { font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+.mini-project-tech { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); flex-grow: 1; }
+.mini-project-links { display: flex; align-items: center; gap: var(--spacing-md); margin-top: var(--spacing-sm); }
+.mini-project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+.mini-project-link:hover { color: var(--accent-primary); }
+
+
 .featured-project-card { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(320px,0.9fr); }
 .featured-project-card .project-card-img-wrapper, .featured-project-card .project-preview { min-height: 100%; }
 .featured-project-card .project-card-body { padding: var(--spacing-2xl); }
@@ -476,6 +512,11 @@ img { max-width: 100%; display: block; }
 .form-alert.success { color: var(--accent-green); background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.22); }
 .form-alert.error { color: #ef4444; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.22); }
 
+.form-alert.fade-in-out {
+  animation: fadeInOut 5s ease-in-out forwards;
+}
+
+
 /* ---- Footer ---- */
 .footer { padding: var(--spacing-3xl) 0 var(--spacing-xl); border-top: 1px solid var(--border-color); background: var(--bg-primary); }
 .footer-content { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--spacing-2xl); margin-bottom: var(--spacing-2xl); }
@@ -544,6 +585,7 @@ img { max-width: 100%; display: block; }
 @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+@keyframes fadeInOut { 0% { opacity: 0; transform: translateY(10px); } 10% { opacity: 1; transform: translateY(0); } 90% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(10px); } }
 
 /* ---- Responsive ---- */
 @media (max-width: 1180px) { .home-sidebar { display: none; } }
@@ -636,6 +678,10 @@ img { max-width: 100%; display: block; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-xl);
+}
+
+.certificate-card-link {
+  display: block;
 }
 
 .certificate-image-card {

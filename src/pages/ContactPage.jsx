@@ -12,12 +12,11 @@ import Footer from '../layouts/Footer';
 import Navbar from '../layouts/Navbar';
 import { personal } from '../data/index';
 
-const CONTACT_API = 'http://localhost:5000/api/contact';
-
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
   const [error, setError] = useState('');
 
   const handleChange = (event) => {
@@ -29,18 +28,26 @@ export default function ContactPage() {
     setSending(true);
     setError('');
 
+    const formData = {
+      ...form,
+      access_key: personal.web3formsKey,
+    };
+
     try {
-      const res = await fetch(CONTACT_API, {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify(formData),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to send.');
 
       setSent(true);
+      setShowAlert(true);
       setForm({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setSent(false), 5000);
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 5000);
     } catch (err) {
       setError(err.message || 'Something went wrong. Please try again.');
     } finally {
@@ -151,7 +158,7 @@ export default function ContactPage() {
                     {sent ? <><FiCheck /> Message Sent</> : sending ? 'Sending...' : <><FiSend /> Send Message</>}
                   </button>
 
-                  {sent && <div className="form-alert success">Thanks. I will get back to you soon.</div>}
+                  {showAlert && <div className="form-alert success fade-in-out">Thanks. I will get back to you soon.</div>}
                   {error && <div className="form-alert error"><FiAlertCircle /> {error}</div>}
                 </form>
               </div>
