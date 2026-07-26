@@ -69,16 +69,7 @@ export default function ContactPage() {
     <>
       <Navbar />
       <main className="page-main">
-        <section className="contact-hero">
-          <div className="container contact-hero-inner">
-            <Link to="/" className="page-back-link"><FiArrowLeft /> Back to Home</Link>
-            <div className="section-badge">Contact</div>
-            <h1 className="section-title">Let's Work Together</h1>
-            <p className="section-subtitle">
-              Send a clear note about the opportunity, project, or collaboration. I usually reply within 24 hours.
-            </p>
-          </div>
-        </section>
+
 
         <section className="section contact-section" id="contact">
           <div className="container">

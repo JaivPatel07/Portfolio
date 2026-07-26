@@ -39,22 +39,9 @@ export default function ProjectsPage() {
       <main className="page-main">
         <section className="section" id="projects">
           <div className="container">
-            <div className="section-header">
-              <Link to="/" className="page-back-link"><FiArrowLeft /> Back to Home</Link>
-              <div className="section-badge">Projects</div>
-              <h1 className="section-title">Project Archive</h1>
-              <p className="section-subtitle">
-                A focused collection of full-stack, AI, and developer-tool projects with clear scope,
-                stack choices, and outcomes.
-              </p>
+             <div className="section-header">
+              <h1 className="section-title">My Projects</h1>
             </div>
-
-            {featured && (
-              <div className="featured-projects-grid">
-                <ProjectCard project={featured} featured />
-              </div>
-            )}
-
             <div className="projects-controls archive-controls">
               <div className="projects-filter" aria-label="Project filters">
                 {categories.map((cat) => (
