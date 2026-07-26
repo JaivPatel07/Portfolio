@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import ProjectCard from '../components/ProjectCard';
 import { projects } from '../data/index';
 
@@ -82,7 +83,7 @@ export default function Projects() {
 
         {filtered.length > 3 && (
           <div className="projects-load-more">
-            <a className="btn btn-secondary" href="/projects">View All Projects</a>
+            <Link className="btn btn-secondary" to="/projects">View All Projects</Link>
           </div>
         )}
       </div>

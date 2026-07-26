@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FiBookOpen, FiCode, FiCpu, FiFolder, FiHome, FiUser } from 'react-icons/fi';
+import { FiAward, FiBookOpen, FiCode, FiCpu, FiFolder, FiHome, FiMail, FiMenu, FiUser, FiX } from 'react-icons/fi';
 import { useTheme } from '../context/ThemeContext';
 
 const homeScrollLinks = [
@@ -13,10 +13,10 @@ const homeScrollLinks = [
 ];
 
 const pageLinks = [
-  { label: 'Home', to: '/' },
-  { label: 'Projects', to: '/projects' },
-  { label: 'Certificates', to: '/certificates' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Home', to: '/', Icon: FiHome },
+  { label: 'Projects', to: '/projects', Icon: FiFolder },
+  { label: 'Certificates', to: '/certificates', Icon: FiAward },
+  { label: 'Contact', to: '/contact', Icon: FiMail },
 ];
 
 export default function Navbar() {
@@ -80,7 +80,12 @@ export default function Navbar() {
           </ul>
 
           <div className="nav-actions">
-            
+            <button
+              className="nav-mobile-toggle"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle navigation menu">
+              {mobileOpen ? <FiX /> : <FiMenu />}
+            </button>
           </div>
         </div>
       </nav>
@@ -106,25 +111,16 @@ export default function Navbar() {
       )}
 
       <div className={`nav-mobile-menu ${mobileOpen ? 'open' : ''}`}>
-        {pageLinks.map((link) => (
+        {pageLinks.map(({ Icon, ...link }) => (
           <Link
             key={link.to}
             to={link.to}
             className={`nav-mobile-link ${location.pathname === link.to ? 'active' : ''}`}
             onClick={() => setMobileOpen(false)}
           >
+            <Icon />
             {link.label}
           </Link>
-        ))}
-        {isHome && homeScrollLinks.map((link) => (
-          <button
-            key={link.id}
-            type="button"
-            className={`nav-mobile-link ${activeSection === link.id ? 'active' : ''}`}
-            onClick={() => scrollTo(link.id)}
-          >
-            {link.label}
-          </button>
         ))}
       </div>
     </>
