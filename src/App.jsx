@@ -7,14 +7,13 @@ import Footer from './layouts/Footer';
 
 // Components
 import ScrollProgress from './components/ScrollProgress';
-import HomePageNav from './components/HomePageNav';
 
 // Sections (Home page)
 import Hero from './sections/Hero';
 import About from './sections/About';
 import Skills from './sections/Skills';
 import TechStack from './sections/TechStack';
-import Experience from './sections/Experience';
+import Projects from './sections/Projects';
 import Education from './sections/Education';
 
 // Pages
@@ -27,14 +26,13 @@ function HomePage() {
   return (
     <>
       <Navbar />
-      <ScrollProgress />
       <main>
         <Hero />
-        <HomePageNav />
         <About />
         <Skills />
+        <Projects />
         <TechStack />
-        <Experience />
+        <Education />
       </main>
       <Footer />
     </>

@@ -43,7 +43,7 @@ export default function Footer() {
               <span className="footer-link" onClick={() => scrollTo('home')}>Home</span>
               <span className="footer-link" onClick={() => scrollTo('about')}>About</span>
               <span className="footer-link" onClick={() => scrollTo('skills')}>Skills</span>
-              <span className="footer-link" onClick={() => scrollTo('experience')}>Experience</span>
+              <span className="footer-link" onClick={() => scrollTo('techstack')}>Tech Stack</span>
             </div>
           </div>
 
