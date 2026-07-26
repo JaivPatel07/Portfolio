@@ -62,7 +62,7 @@ export default function Navbar() {
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="navbar-inner">
           <Link to="/" className="nav-logo" aria-label="Go to homepage">
-            &lt;JP /&gt;
+            JP
           </Link>
 
           <ul className="nav-links">

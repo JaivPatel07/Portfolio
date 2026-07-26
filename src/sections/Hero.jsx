@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FiEye, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { FiEye, FiGithub, FiLinkedin, FiMail, FiFileText } from 'react-icons/fi';
 import { personal } from '../data/index';
 
 const roles = personal.titles;
@@ -59,6 +59,9 @@ export default function Hero() {
             <button className="btn btn-primary" onClick={() => scrollTo('projects')}>
               <FiEye /> View Projects
             </button>
+            <a href={personal.resume} target="_blank" rel="noreferrer" className="btn btn-secondary">
+              <FiFileText /> View Resume
+            </a>
           </div>
 
           <div className="hero-socials">
@@ -81,7 +84,7 @@ export default function Hero() {
             <div className="hero-avatar-ring-2" />
             <div className="hero-avatar-ring" />
             <div className="hero-avatar-glow" />
-            <img className="hero-avatar-img" src="src/assets/avatar.jpeg" alt="Jaiv Patel" />
+            <img className="hero-avatar-img" src="/assets/avatar.jpeg" alt="Jaiv Patel" />
           </div>
         </div>
       </div>
