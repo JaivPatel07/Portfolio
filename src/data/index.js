@@ -132,7 +132,7 @@ export const projects = [
       "A local-first API testing platform built for speed, privacy, and developer productivity.",
     longDesc:
       "RequestLab is an open-source API client inspired by Postman. It keeps requests, collections, and environments entirely on the user's machine while providing a modern and lightweight development experience.",
-    image: "/assets/project/req.png",
+    image: "/assets/projects/req.png",
     category: "Developer Tool",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     features: [
@@ -153,7 +153,7 @@ export const projects = [
       "A browser-based Markdown editor supporting PDF, DOCX, and Markdown workflows.",
     longDesc:
       "MD Studio is a private Markdown workspace that allows users to create, edit, convert, and manage Markdown documents while keeping all files locally in the browser.",
-    image: "/assets/project/MD.png",
+    image: "/assets/projects/MD.png",
     category: "Developer Tool",
     tech: ["React", "JavaScript", "PDF.js", "docx"],
     features: [
@@ -216,7 +216,7 @@ export const projects = [
       "A full-stack learning management system for online education.",
     longDesc:
       "EduSphere allows instructors to manage courses while students can enrol, track progress, and receive certificates through a clean and responsive interface.",
-    image: "/assets/project/edu.png",
+    image: "/assets/projects/edu.png",
     category: "Full Stack",
     tech: ["Flask", "SQLite", "JavaScript"],
     features: [
@@ -406,7 +406,7 @@ export const achievements = {
           date: '2024',
           category: 'IBM',
           logo: '/logos/ibm.svg',
-          thumbnail: ' /assets/certificates/Introduction to HTML, CSS, & JavaScript-page-1.png',
+          thumbnail: '/assets/certificates/Introduction to HTML, CSS, & JavaScript-page-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
       ],
@@ -421,7 +421,7 @@ export const achievements = {
           date: '2026',
           category: 'Google',
           logo: '/logos/google.svg',
-          thumbnail: ' /assets/certificates/Foudation of DS-page-1.png',
+          thumbnail: '/assets/certificates/FoudationofDSpage-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
         {
@@ -430,7 +430,7 @@ export const achievements = {
           date: '2026',
           category: 'Google',
           logo: '/logos/google.svg',
-          thumbnail: ' /assets/certificates/Google 1-page-1.png',
+          thumbnail: '/assets/certificates/Google 1-page-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
         {
@@ -439,7 +439,7 @@ export const achievements = {
           date: '2026',
           category: 'IBM',
           logo: '/logos/ibm.svg',
-          thumbnail: ' /assets/certificates/ML.png',
+          thumbnail: '/assets/certificates/ML.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
       ],
@@ -454,7 +454,7 @@ export const achievements = {
           date: '2024',
           category: 'Programming',
           logo: '/logos/hackerrank.svg',
-          thumbnail: ' /assets/certificates/python_basic certificate-page-1.png',
+          thumbnail: '/assets/certificates/python_basic certificate-page-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
         {
@@ -463,7 +463,7 @@ export const achievements = {
           date: '2024',
           category: 'Programming',
           logo: '/logos/hackerrank.svg',
-          thumbnail: ' /assets/certificates/java_basic certificate-page-1.png',
+          thumbnail: '/assets/certificates/java_basic certificate-page-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
         {
@@ -472,7 +472,7 @@ export const achievements = {
           date: '2025',
           category: 'Programming',
           logo: '/logos/hackerrank.svg',
-          thumbnail: ' /assets/certificates/image.png',
+          thumbnail: '/assets/certificates/image.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
         {
@@ -481,7 +481,7 @@ export const achievements = {
           date: '2025',
           category: 'Programming',
           logo: '/logos/hackerrank.svg',
-          thumbnail: ' /assets/certificates/software_engineer_intern certificate-page-1.png',
+          thumbnail: '/assets/certificates/software_engineer_intern certificate-page-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
       ],
@@ -496,7 +496,7 @@ export const achievements = {
           date: '2026',
           category: 'Hackathon',
           logo: '/logos/daiict.svg',
-          thumbnail: ' /assets/certificates/DAIICT_Hackathon-page-1.png',
+          thumbnail: '/assets/certificates/DAIICT_Hackathon-page-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
         {

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { FiEye, FiGithub, FiLinkedin, FiMail, FiFileText } from 'react-icons/fi';
 import { personal } from '../data/index';
 
+import avatar from '/assets/avatar.jpeg';
 const roles = personal.titles;
 
 export default function Hero() {
@@ -84,7 +85,7 @@ export default function Hero() {
             <div className="hero-avatar-ring-2" />
             <div className="hero-avatar-ring" />
             <div className="hero-avatar-glow" />
-            <img className="hero-avatar-img" src="/assets/avatar.jpeg" alt="Jaiv Patel" />
+            <img className="hero-avatar-img" src={avatar} alt="Jaiv Patel" />
           </div>
         </div>
       </div>
