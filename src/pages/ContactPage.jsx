@@ -29,8 +29,10 @@ export default function ContactPage() {
     setError('');
 
     const formData = {
-      ...form,
       access_key: personal.web3formsKey,
+      ...form,
+      from_name: "Jaiv Portfolio",
+      replyto: form.email,
     };
 
     try {
@@ -39,17 +41,24 @@ export default function ContactPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
+
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to send.');
+
+      if (!data.success) {
+        throw new Error(data.message || "Failed to send.");
+      }
 
       setSent(true);
       setShowAlert(true);
       setForm({ name: '', email: '', subject: '', message: '' });
       setTimeout(() => {
         setShowAlert(false);
+        setSent(false);
       }, 5000);
     } catch (err) {
-      setError(err.message || 'Something went wrong. Please try again.');
+      setSent(false);
+      setShowAlert(false);
+      setError(err instanceof Error ? err.message : "Something went wrong.");
     } finally {
       setSending(false);
     }
@@ -133,6 +142,12 @@ export default function ContactPage() {
               <div className="contact-form">
                 <h2 className="contact-form-title">Send a Message</h2>
                 <form onSubmit={handleSubmit}>
+                  {/* Honeypot for spam protection */}
+                  <input
+                    type="checkbox"
+                    name="botcheck"
+                    style={{ display: "none" }}
+                  />
                   <div className="form-row">
                     <div className="form-group">
                       <label className="form-label" htmlFor="name">Your Name</label>
@@ -155,7 +170,13 @@ export default function ContactPage() {
                   </div>
 
                   <button type="submit" className="btn btn-primary contact-submit" disabled={sending || sent}>
-                    {sent ? <><FiCheck /> Message Sent</> : sending ? 'Sending...' : <><FiSend /> Send Message</>}
+                    {sent ? (
+                      <><FiCheck /> Message Sent</>
+                    ) : sending ? (
+                      <><span className="spinner" /> Sending...</>
+                    ) : (
+                      <><FiSend /> Send Message</>
+                    )}
                   </button>
 
                   {showAlert && <div className="form-alert success fade-in-out">Thanks. I will get back to you soon.</div>}

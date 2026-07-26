@@ -22,7 +22,7 @@ export const personal = {
   github: "https://github.com/JaivPatel07",
   linkedin: "https://www.linkedin.com/in/jaiv-patel-52040b308",
   website: "https://jaivpatel.dev",
-  web3formsKey: "YOUR_WEB3FORMS_ACCESS_KEY",
+  web3formsKey: import.meta.env.VITE_WEB3FORMS_KEY,
   aboutHighlights: [
     'Full-stack product development',
     'Clean React interfaces',
