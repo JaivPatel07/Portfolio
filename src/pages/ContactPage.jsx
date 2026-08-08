@@ -29,22 +29,22 @@ export default function ContactPage() {
     setError('');
 
     const formData = {
-      access_key: personal.web3formsKey,
       ...form,
-      from_name: "Jaiv Portfolio",
-      replyto: form.email,
+      _subject: form.subject || "New message from Jaiv Portfolio",
+      _template: "table",
+      _captcha: "false",
     };
 
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch('https://formsubmit.co/ajax/jaivpatel402@gmail.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(formData),
       });
 
       const data = await res.json();
 
-      if (!data.success) {
+      if (!res.ok) {
         throw new Error(data.message || "Failed to send.");
       }
 
@@ -81,8 +81,6 @@ export default function ContactPage() {
     <>
       <Navbar />
       <main className="page-main">
-
-
         <section className="section contact-section" id="contact">
           <div className="container">
             <div className="contact-layout improved-contact-layout">

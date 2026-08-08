@@ -12,7 +12,6 @@ import ScrollProgress from './components/ScrollProgress';
 import Hero from './sections/Hero';
 import About from './sections/About';
 import Skills from './sections/Skills';
-import TechStack from './sections/TechStack';
 import Projects from './sections/Projects';
 import Education from './sections/Education';
 
@@ -31,7 +30,6 @@ function HomePage() {
         <About />
         <Skills />
         <Projects />
-        <TechStack />
         <Education />
       </main>
       <Footer />

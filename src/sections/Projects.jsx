@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import ProjectCard from '../components/ProjectCard';
 import { projects } from '../data/index';
 
-const categories = ['All', 'Full Stack', 'AI', 'Tools', 'Data Science', 'Open Source'];
+const categories = ['All', 'Full Stack', 'AI', 'Tools', 'Data Science', 'Developer Tool'];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -16,7 +16,6 @@ export default function Projects() {
     return projects.filter((project) => {
       const matchCat =
         activeFilter === 'All' ||
-        (activeFilter === 'Open Source' && Boolean(project.github)) ||
         project.category === activeFilter ||
         project.tech.includes(activeFilter);
 
@@ -33,7 +32,7 @@ export default function Projects() {
   const visibleProjects = filtered.slice(0, 3);
 
   return (
-    <section className="section" id="projects">
+    <section className="section" id="projects" style={{ background: 'var(--bg-secondary)' }}>
       <div className="container">
         <div className="section-header">
           <div className="section-badge">Projects</div>

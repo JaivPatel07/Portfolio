@@ -1,12 +1,11 @@
 import { useMemo, useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import ProjectCard from '../components/ProjectCard';
-import MiniProjectCard from '../components/MiniProjectCard';
 import Footer from '../layouts/Footer';
 import Navbar from '../layouts/Navbar';
 import { projects } from '../data/index';
 
-const categories = ['All', 'Full Stack', 'AI', 'Tools', 'Data Science', 'Django', 'React'];
+const categories = ['All', 'Full Stack', 'AI', 'Tools', 'Data Science', 'Developer Tool'];
 
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -32,8 +31,7 @@ export default function ProjectsPage() {
   }, [activeFilter, search]);
 
   const featured = filteredProjects.filter((p) => p.type === 'featured');
-  const standard = filteredProjects.filter((p) => p.type === 'standard');
-  const mini = filteredProjects.filter((p) => p.type === 'mini');
+  const others = filteredProjects.filter((p) => p.type !== 'featured');
 
   return (
     <>
@@ -42,6 +40,11 @@ export default function ProjectsPage() {
         <section className="section" id="projects">
           <div className="container">
             <div className="section-header">
+              <div className="section-badge">Projects</div>
+              <h1 className="section-title">All Projects</h1>
+              <p className="section-subtitle">
+                A complete archive of my projects, from full-stack apps to developer tools.
+              </p>
             </div>
             <div className="projects-controls archive-controls">
               <div className="projects-filter" aria-label="Project filters">
@@ -70,31 +73,20 @@ export default function ProjectsPage() {
             {featured.length > 0 && (
               <div className="project-category-wrapper">
                 <h2 className="project-category-title"><span className="project-category-icon">⭐</span> Featured Projects</h2>
-                <div className="projects-grid">
+                <div className="featured-projects-grid">
                   {featured.map((project) => (
-                    <ProjectCard project={project} key={project.id} />
+                    <ProjectCard project={project} featured key={project.id} />
                   ))}
                 </div>
               </div>
             )}
 
-            {standard.length > 0 && (
+            {others.length > 0 && (
               <div className="project-category-wrapper">
                 <h2 className="project-category-title"><span className="project-category-icon">🚀</span> More Projects</h2>
                 <div className="projects-grid">
-                  {standard.map((project) => (
+                  {others.map((project) => (
                     <ProjectCard project={project} key={project.id} />
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {mini.length > 0 && (
-              <div className="project-category-wrapper">
-                <h2 className="project-category-title"><span className="project-category-icon">🎮</span> Mini Projects</h2>
-                <div className="mini-projects-grid">
-                  {mini.map((project) => (
-                    <MiniProjectCard project={project} key={project.id} />
                   ))}
                 </div>
               </div>

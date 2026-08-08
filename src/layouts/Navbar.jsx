@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FiAward, FiBookOpen, FiCode, FiCpu, FiFolder, FiHome, FiMail, FiMenu, FiUser, FiX } from 'react-icons/fi';
+import { FiAward, FiBookOpen, FiCode, FiFolder, FiHome, FiMail, FiMenu, FiUser, FiX } from 'react-icons/fi';
 import { useTheme } from '../context/ThemeContext';
 
 const homeScrollLinks = [
@@ -8,7 +8,6 @@ const homeScrollLinks = [
   { label: 'About', id: 'about', Icon: FiUser },
   { label: 'Skills', id: 'skills', Icon: FiCode },
   { label: 'Projects', id: 'projects', Icon: FiFolder },
-  { label: 'Stack', id: 'techstack', Icon: FiCpu },
   { label: 'Education', id: 'education', Icon: FiBookOpen },
 ];
 

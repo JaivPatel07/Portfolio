@@ -34,10 +34,10 @@ export const personal = {
 export const education = {
   degree: "B.Tech",
   major: "Computer Science & Engineering",
-  school: "XYZ University",
+  school: "LJ University, Ahmedabad",
   duration: "2024 – 2028",
   cgpa: "8.5 / 10",
-  location: "India",
+  location: "Ahmedabad, India",
   logo: "🎓",
   courses: [
     "Data Structures & Algorithms",
@@ -57,7 +57,6 @@ export const education = {
     "Core Member, Tech Club",
   ],
 };
-
 
 export const techStack = [
   {
@@ -101,7 +100,6 @@ export const techStack = [
   },
 ];
 
-
 export const projects = [
   {
     id: "codo",
@@ -111,7 +109,8 @@ export const projects = [
       "A student networking and collaboration platform for discovering events, building teams, and connecting with like-minded students.",
     longDesc:
       "CoDO (Collaborate and Do) is a full-stack platform designed to help students discover hackathons, workshops, competitions, and projects while enabling organizations to publish official events. It features role-based authentication, organization management, public profiles, event calendars, and collaboration tools.",
-    image: "/assets/projects/codo.webp",
+    image: "/assets/projects/edu.png",
+    gradient: "linear-gradient(135deg,#7c3aed,#06b6d4)",
     category: "Full Stack",
     tech: ["React", "Django", "PostgreSQL", "JWT", "Tailwind CSS"],
     features: [
@@ -123,7 +122,6 @@ export const projects = [
     github: "https://github.com/JaivPatel07/CoDO",
     demo: "",
   },
-
   {
     id: "requestlab",
     title: "RequestLab",
@@ -133,6 +131,7 @@ export const projects = [
     longDesc:
       "RequestLab is an open-source API client inspired by Postman. It keeps requests, collections, and environments entirely on the user's machine while providing a modern and lightweight development experience.",
     image: "/assets/projects/req.png",
+    gradient: "linear-gradient(135deg,#06b6d4,#3b82f6)",
     category: "Developer Tool",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     features: [
@@ -144,7 +143,6 @@ export const projects = [
     github: "https://github.com/JaivPatel07/RequestLab",
     demo: "",
   },
-
   {
     id: "md-studio",
     title: "MD Studio",
@@ -154,6 +152,7 @@ export const projects = [
     longDesc:
       "MD Studio is a private Markdown workspace that allows users to create, edit, convert, and manage Markdown documents while keeping all files locally in the browser.",
     image: "/assets/projects/MD.png",
+    gradient: "linear-gradient(135deg,#10b981,#06b6d4)",
     category: "Developer Tool",
     tech: ["React", "JavaScript", "PDF.js", "docx"],
     features: [
@@ -165,7 +164,6 @@ export const projects = [
     github: "https://github.com/JaivPatel07/MD-Studio",
     demo: "https://md-studio-bdfwuc7js-jaivpatel07s-projects.vercel.app/",
   },
-
   {
     id: "financepro",
     title: "FinancePro",
@@ -174,7 +172,7 @@ export const projects = [
       "An AI-powered financial analytics platform for analysing bank statements.",
     longDesc:
       "FinancePro transforms bank statement CSV files into interactive dashboards with spending analysis, anomaly detection, financial insights, and AI-assisted reporting.",
-    image: "/assets/projects/financepro.webp",
+    gradient: "linear-gradient(135deg,#ec4899,#f59e0b)",
     category: "AI",
     tech: ["Python", "Streamlit", "Pandas", "Plotly"],
     features: [
@@ -186,7 +184,6 @@ export const projects = [
     github: "https://github.com/JaivPatel07/FinancePro",
     demo: "https://jaivpatel07-bank-statement-analyzer-app-vhw2kv.streamlit.app/",
   },
-
   {
     id: "smart-data-cleaner",
     title: "Smart Data Cleaner",
@@ -195,7 +192,7 @@ export const projects = [
       "An intelligent data preprocessing platform for machine learning workflows.",
     longDesc:
       "Automates missing value handling, duplicate removal, outlier detection, memory optimisation, and generates explainable cleaning reports using FastAPI and Pandas.",
-    image: "/assets/projects/datacleaner.webp",
+    gradient: "linear-gradient(135deg,#10b981,#7c3aed)",
     category: "Data Science",
     tech: ["Python", "FastAPI", "Pandas"],
     features: [
@@ -207,7 +204,6 @@ export const projects = [
     github: "https://github.com/JaivPatel07/Smart-Data-Cleaner",
     demo: "",
   },
-
   {
     id: "edusphere",
     title: "EduSphere LMS",
@@ -217,6 +213,7 @@ export const projects = [
     longDesc:
       "EduSphere allows instructors to manage courses while students can enrol, track progress, and receive certificates through a clean and responsive interface.",
     image: "/assets/projects/edu.png",
+    gradient: "linear-gradient(135deg,#f59e0b,#ec4899)",
     category: "Full Stack",
     tech: ["Flask", "SQLite", "JavaScript"],
     features: [
@@ -232,7 +229,7 @@ export const projects = [
     title: "SafeMeds Pharmacy Management System",
     type: "standard",
     description: "A comprehensive pharmacy management system for inventory, sales, and customer management.",
-    image: "/assets/projects/safemeds.webp", // Placeholder image
+    gradient: "linear-gradient(135deg,#3b82f6,#06b6d4)",
     category: "Full Stack",
     tech: ["Java", "JDBC", "MySQL"],
     github: "https://github.com/JaivPatel07/SafeMeds",
@@ -243,7 +240,7 @@ export const projects = [
     title: "TraceFlow",
     type: "standard",
     description: "A unique Python developer tool for tracing execution flow in complex applications.",
-    image: "/assets/projects/traceflow.webp", // Placeholder image
+    gradient: "linear-gradient(135deg,#7c3aed,#ec4899)",
     category: "Developer Tool",
     tech: ["Python", "CLI"],
     github: "https://github.com/JaivPatel07/TraceFlow",
@@ -254,7 +251,7 @@ export const projects = [
     title: "Web Analyzer",
     type: "standard",
     description: "A developer tool to analyze website performance, accessibility, and SEO.",
-    image: "/assets/projects/web-analyzer.webp", // Placeholder image
+    gradient: "linear-gradient(135deg,#06b6d4,#10b981)",
     category: "Developer Tool",
     tech: ["Python", "Flask", "BeautifulSoup"],
     github: "https://github.com/JaivPatel07/Web-Analyzer",
@@ -265,43 +262,10 @@ export const projects = [
     title: "AI Joke App",
     type: "standard",
     description: "A full-stack application that generates jokes using OpenAI APIs.",
-    image: "/assets/projects/ai-joke-app.webp", // Placeholder image
+    gradient: "linear-gradient(135deg,#f59e0b,#ec4899)",
     category: "AI",
     tech: ["React", "Node.js", "OpenAI API"],
     github: "https://github.com/JaivPatel07/AI-Joke-App",
-    demo: "",
-  },
-  {
-    id: "geoexplorer",
-    title: "GeoExplorer",
-    type: "standard",
-    description: "An interactive map application with various geographical data visualizations.",
-    image: "/assets/projects/geoexplorer.webp", // Placeholder image
-    category: "Data Visualization",
-    tech: ["React", "Mapbox GL JS", "D3.js"],
-    github: "https://github.com/JaivPatel07/GeoExplorer",
-    demo: "",
-  },
-  {
-    id: "smart-notes",
-    title: "Smart Notes Chrome Extension",
-    type: "standard",
-    description: "A Chrome extension for taking smart notes with CRUD functionality and local storage.",
-    image: "/assets/projects/smart-notes.webp", // Placeholder image
-    category: "Browser Extension",
-    tech: ["JavaScript", "Chrome API", "Local Storage"],
-    github: "https://github.com/JaivPatel07/Smart-Notes",
-    demo: "",
-  },
-  {
-    id: "superstore-sales-analytics",
-    title: "Superstore Sales Analytics",
-    type: "standard",
-    description: "A data analytics project providing insights into superstore sales data with interactive dashboards.",
-    image: "/assets/projects/superstore-sales.webp", // Placeholder image
-    category: "Data Science",
-    tech: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-    github: "https://github.com/JaivPatel07/Superstore-Sales-Analytics",
     demo: "",
   },
   {
@@ -309,7 +273,7 @@ export const projects = [
     title: "Tic Tac Toe AI",
     type: "standard",
     description: "A Tic Tac Toe game where you can play against an unbeatable AI opponent powered by the Minimax algorithm.",
-    image: "/assets/projects/tictactoe.webp",
+    gradient: "linear-gradient(135deg,#10b981,#f59e0b)",
     category: "AI",
     tech: ["JavaScript", "HTML", "CSS", "Minimax"],
     github: "https://github.com/JaivPatel07/Tic-Tac-Toe",
@@ -320,7 +284,6 @@ export const projects = [
     title: "Pong Game",
     type: "mini",
     description: "A classic Pong game built with plain JavaScript, HTML, and CSS.",
-    image: "/assets/projects/pong.webp",
     category: "Game",
     tech: ["JavaScript", "HTML", "CSS"],
     github: "https://github.com/JaivPatel07/Pong-Game",
@@ -331,44 +294,10 @@ export const projects = [
     title: "Snake Game",
     type: "mini",
     description: "The classic Snake game implemented using JavaScript and HTML Canvas.",
-    image: "/assets/projects/snake.webp",
     category: "Game",
     tech: ["JavaScript", "HTML", "CSS"],
     github: "https://github.com/JaivPatel07/Snake-Game",
     demo: "https://jaivpatel07.github.io/Snake-Game/",
-  },
-  {
-    id: "2048-game",
-    title: "2048 Game",
-    type: "mini",
-    description: "A web-based version of the popular 2048 puzzle game.",
-    image: "/assets/projects/2048.webp",
-    category: "Game",
-    tech: ["JavaScript", "HTML", "CSS"],
-    github: "https://github.com/JaivPatel07/2048-Game",
-    demo: "https://jaivpatel07.github.io/2048-Game/",
-  },
-  {
-    id: "calculator",
-    title: "Basic Calculator",
-    type: "mini",
-    description: "A simple calculator with basic arithmetic operations.",
-    image: "/assets/projects/calculator.webp",
-    category: "Tool",
-    tech: ["JavaScript", "HTML", "CSS"],
-    github: "https://github.com/JaivPatel07/Calculator",
-    demo: "https://jaivpatel07.github.io/Calculator/",
-  },
-  {
-    id: "digital-clock",
-    title: "Digital Clock",
-    type: "mini",
-    description: "A clean and simple digital clock.",
-    image: "/assets/projects/clock.webp",
-    category: "Tool",
-    tech: ["JavaScript", "HTML", "CSS"],
-    github: "https://github.com/JaivPatel07/Digital-Clock",
-    demo: "https://jaivpatel07.github.io/Digital-Clock/",
   },
 ];
 
@@ -405,22 +334,19 @@ export const achievements = {
           issuer: 'IBM',
           date: '2024',
           category: 'IBM',
-          logo: '/logos/ibm.svg',
           thumbnail: '/assets/certificates/Introduction to HTML, CSS, & JavaScript-page-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
       ],
     },
-
     {
-      title: ' AI & Data Science',
+      title: 'AI & Data Science',
       list: [
         {
           title: 'Foundations of Data Science',
           issuer: 'Google',
           date: '2026',
           category: 'Google',
-          logo: '/logos/google.svg',
           thumbnail: '/assets/certificates/FoudationofDSpage-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
@@ -429,7 +355,6 @@ export const achievements = {
           issuer: 'Google',
           date: '2026',
           category: 'Google',
-          logo: '/logos/google.svg',
           thumbnail: '/assets/certificates/Google 1-page-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
@@ -438,22 +363,19 @@ export const achievements = {
           issuer: 'IBM',
           date: '2026',
           category: 'IBM',
-          logo: '/logos/ibm.svg',
           thumbnail: '/assets/certificates/ML.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
       ],
     },
-
     {
-      title: 'HackerRank Certifications',
+      title: 'Programming Certifications',
       list: [
         {
           title: 'Python (Basic)',
           issuer: 'HackerRank',
           date: '2024',
           category: 'Programming',
-          logo: '/logos/hackerrank.svg',
           thumbnail: '/assets/certificates/python_basic certificate-page-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
@@ -462,7 +384,6 @@ export const achievements = {
           issuer: 'HackerRank',
           date: '2024',
           category: 'Programming',
-          logo: '/logos/hackerrank.svg',
           thumbnail: '/assets/certificates/java_basic certificate-page-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
@@ -471,7 +392,6 @@ export const achievements = {
           issuer: 'HackerRank',
           date: '2025',
           category: 'Programming',
-          logo: '/logos/hackerrank.svg',
           thumbnail: '/assets/certificates/image.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
@@ -480,13 +400,11 @@ export const achievements = {
           issuer: 'HackerRank',
           date: '2025',
           category: 'Programming',
-          logo: '/logos/hackerrank.svg',
           thumbnail: '/assets/certificates/software_engineer_intern certificate-page-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
       ],
     },
-
     {
       title: 'Hackathons',
       list: [
@@ -495,7 +413,6 @@ export const achievements = {
           issuer: 'DA-IICT',
           date: '2026',
           category: 'Hackathon',
-          logo: '/logos/daiict.svg',
           thumbnail: '/assets/certificates/DAIICT_Hackathon-page-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
@@ -504,7 +421,6 @@ export const achievements = {
           issuer: 'LJ University',
           date: '2025',
           category: 'Hackathon',
-          logo: '/logos/lj.svg',
           thumbnail: '/assets/certificates/LJ Hackathon-page-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
@@ -513,8 +429,7 @@ export const achievements = {
           issuer: 'LD College of Engineering',
           date: '2026',
           category: 'Hackathon',
-          logo: '/logos/ld.svg',
-          thumbnail:'/assets/certificates/LD_Hackathon-page-1.png',
+          thumbnail: '/assets/certificates/LD_Hackathon-page-1.png',
           link: 'https://drive.google.com/drive/folders/1Ca1AqyC463x64QOUIzc7B-EMJMzU049D?usp=drive_link',
         },
       ],

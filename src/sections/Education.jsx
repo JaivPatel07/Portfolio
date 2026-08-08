@@ -1,23 +1,5 @@
-const educationJourney = [
-  {
-    year: '2022',
-    label: 'Class 10',
-    title: 'PM Shri School Jawahar Navodaya Vidyalaya (JNV), Gandhinagar',
-    description: 'Completed Class 10 and built a strong academic foundation.',
-  },
-  {
-    year: '2024',
-    label: 'Class 12',
-    title: 'PM Shri School Jawahar Navodaya Vidyalaya (JNV), Gandhinagar',
-    description: 'Completed Class 12 with focus on science and problem solving.',
-  },
-  {
-    year: 'Present',
-    label: 'College',
-    title: 'LJ University',
-    description: 'Studying Computer Science & Engineering and building real software projects.',
-  },
-];
+import { FiAward, FiBookOpen, FiCalendar, FiMapPin } from 'react-icons/fi';
+import { education } from '../data/index';
 
 export default function Education() {
   return (
@@ -27,22 +9,36 @@ export default function Education() {
           <div className="section-badge">Education</div>
           <h2 className="section-title">Academic Journey</h2>
           <p className="section-subtitle">
-            A simple timeline of my school and college path.
+            Pursuing a degree in Computer Science &amp; Engineering.
           </p>
         </div>
 
-        <div className="education-journey-line">
-          {educationJourney.map((item) => (
-            <article className="education-journey-item" key={`${item.label}-${item.year}`}>
-              <div className="education-journey-year">{item.year}</div>
-              <div className="education-journey-dot" />
-              <div className="education-journey-card">
-                <span>{item.label}</span>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
-            </article>
-          ))}
+        <div className="education-card">
+          <div className="education-header">
+            <div className="education-logo">{education.logo}</div>
+            <div>
+              <div className="education-degree">{education.degree} — {education.major}</div>
+              <div className="education-school">{education.school}</div>
+            </div>
+          </div>
+
+          <div className="education-meta">
+            <div className="education-meta-item">
+              <FiCalendar /> {education.duration}
+            </div>
+            <div className="education-meta-item">
+              <FiMapPin /> {education.location}
+            </div>
+            <div className="education-meta-item">
+              <FiAward /> CGPA: {education.cgpa}
+            </div>
+          </div>
+
+          <div className="education-courses">
+            {education.courses.map((course) => (
+              <span className="tag" key={course}>{course}</span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
