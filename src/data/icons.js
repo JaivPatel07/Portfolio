@@ -20,8 +20,16 @@ import {
   SiFigma,
   SiTensorflow,
   SiExpress,
+  SiStreamlit,
+  SiFlask,
+  SiPandas,
+  SiPlotly,
+  SiSqlite,
+  SiMysql,
+  SiHtml5,
 } from 'react-icons/si';
 import { FaAws, FaJava } from 'react-icons/fa';
+import { VscVscode } from 'react-icons/vsc';
 
 export const icons = {
   SiReact,
@@ -47,4 +55,13 @@ export const icons = {
   SiTensorflow,
   FaJava,
   SiExpress,
+  SiVisualstudiocode: VscVscode,
+  VscVscode,
+  SiStreamlit,
+  SiFlask,
+  SiPandas,
+  SiPlotly,
+  SiSqlite,
+  SiMysql,
+  SiHtml5,
 };

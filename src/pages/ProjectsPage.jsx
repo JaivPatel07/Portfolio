@@ -1,11 +1,19 @@
 import { useMemo, useState } from 'react';
-import { FiSearch } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import {
+  FiArrowLeft,
+  FiCode,
+  FiFolder,
+  FiLayers,
+  FiSearch,
+  FiStar,
+} from 'react-icons/fi';
 import ProjectCard from '../components/ProjectCard';
 import Footer from '../layouts/Footer';
 import Navbar from '../layouts/Navbar';
 import { projects } from '../data/index';
 
-const categories = ['All', 'Full Stack', 'AI', 'Tools', 'Data Science', 'Developer Tool'];
+const categories = ['All', 'Full Stack', 'Developer Tool', 'AI', 'Data Science', 'Game'];
 
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -37,16 +45,23 @@ export default function ProjectsPage() {
     <>
       <Navbar />
       <main className="page-main">
-        <section className="section" id="projects">
+        <section className="section" id="projects-archive">
           <div className="container">
+            <Link to="/" className="page-back-link">
+              <FiArrowLeft /> <span>Back to Home</span>
+            </Link>
+
             <div className="section-header">
-              <div className="section-badge">Projects</div>
-              <h1 className="section-title">All Projects</h1>
+              <div className="section-badge">
+                <FiFolder /> <span>Complete Archive</span>
+              </div>
+              <h1 className="section-title">All Projects &amp; Experiments</h1>
               <p className="section-subtitle">
-                A complete archive of my projects, from full-stack apps to developer tools.
+                A complete directory of {projects.length} full-stack web apps, developer tools, AI dashboards, and interactive games.
               </p>
             </div>
-            <div className="projects-controls archive-controls">
+
+            <div className="projects-controls-bar archive-controls">
               <div className="projects-filter" aria-label="Project filters">
                 {categories.map((cat) => (
                   <button
@@ -59,20 +74,24 @@ export default function ProjectsPage() {
                   </button>
                 ))}
               </div>
-              <div className="projects-search">
+
+              <label className="projects-search">
                 <FiSearch />
                 <input
                   type="search"
-                  placeholder="Search projects..."
+                  placeholder="Search projects or technologies..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
-              </div>
+              </label>
             </div>
 
             {featured.length > 0 && (
               <div className="project-category-wrapper">
-                <h2 className="project-category-title"><span className="project-category-icon">⭐</span> Featured Projects</h2>
+                <h2 className="project-category-title">
+                  <FiStar className="project-category-icon" />
+                  <span>Flagship Applications ({featured.length})</span>
+                </h2>
                 <div className="featured-projects-grid">
                   {featured.map((project) => (
                     <ProjectCard project={project} featured key={project.id} />
@@ -83,7 +102,10 @@ export default function ProjectsPage() {
 
             {others.length > 0 && (
               <div className="project-category-wrapper">
-                <h2 className="project-category-title"><span className="project-category-icon">🚀</span> More Projects</h2>
+                <h2 className="project-category-title">
+                  <FiCode className="project-category-icon" />
+                  <span>Standard &amp; Mini Builds ({others.length})</span>
+                </h2>
                 <div className="projects-grid">
                   {others.map((project) => (
                     <ProjectCard project={project} key={project.id} />
@@ -94,8 +116,9 @@ export default function ProjectsPage() {
 
             {filteredProjects.length === 0 && (
               <div className="projects-not-found">
-                <h3>No projects found</h3>
-                <p>Try a different filter or search term.</p>
+                <FiLayers style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }} />
+                <h3>No projects match your filter</h3>
+                <p>Try clearing the search query or selecting &quot;All&quot;.</p>
               </div>
             )}
           </div>
