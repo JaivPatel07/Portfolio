@@ -5,8 +5,10 @@ import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './layouts/Navbar';
 import Footer from './layouts/Footer';
 
-// Components
+// Global Interactive Components
 import ScrollProgress from './components/ScrollProgress';
+import CommandPalette from './components/CommandPalette';
+import ProjectModal from './components/ProjectModal';
 
 // Sections (Home page)
 import Hero from './sections/Hero';
@@ -41,6 +43,9 @@ export default function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
+        <ScrollProgress />
+        <CommandPalette />
+        <ProjectModal />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
